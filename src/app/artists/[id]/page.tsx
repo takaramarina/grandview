@@ -15,7 +15,7 @@ export default function ArtistPage({ params }: Props) {
     <main className="px-6 py-16 max-w-5xl mx-auto">
       {/* Name + Bio */}
       <div className="flex flex-col items-center text-left mb-20">
-        <h1 className="text-3xl mb-8 font-semibold">{artist.name}</h1>
+        <h1 className="text-5xl mb-8 uppercase font-semibold">{artist.name}</h1>
         <p className="mt-4 text-gray-700 max-w-2xl">{artist.bio}</p>
       </div>
 
