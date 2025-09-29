@@ -12,7 +12,7 @@ export default function HomePage() {
           .map((artist) => (
             <Link key={artist.id} href={`/artists/${artist.id}`} className="block py-10 sm:py-12">
               <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium uppercase tracking-tight">
+                <h2 className="text-3xl sm:text-5xl md:text-5xl font-medium uppercase tracking-tight">
                   {artist.name}
                 </h2>
                 <div className="relative w-full aspect-[4/3] overflow-hidden">
