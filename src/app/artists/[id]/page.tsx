@@ -14,15 +14,25 @@ export default function ArtistPage({ params }: Props) {
   return (
     <main className="px-6 py-16 max-w-5xl mx-auto">
       {/* Name + Bio */}
-      <div className="flex flex-col items-center text-left mb-20">
-        <h1 className="text-5xl mb-8 uppercase font-semibold">{artist.name}</h1>
-        <p className="mt-4 text-gray-700 max-w-2xl">{artist.bio}</p>
+      <div className="flex flex-col items-center text-left mb-8">
+        <h1 className="text-5xl mb-8 uppercase font-semibold text-center">{artist.name}</h1>
+        {(artist.website || artist.instagram) && (
+          <div className="flex gap-6 justify-center mb-6">
+            {artist.website && (
+              <a href={artist.website} target="_blank" rel="noopener noreferrer" className="underline">Website</a>
+            )}
+            {artist.instagram && (
+              <a href={artist.instagram} target="_blank" rel="noopener noreferrer" className="underline">Instagram</a>
+            )}
+          </div>
+        )}
+        <p className="text-gray-700 max-w-2xl text-left">{artist.bio}</p>
       </div>
 
       {/* Works */}
       {artist.works && artist.works.length > 0 && (
         <>
-          <h2 className="text-2xl font-medium mb-16">Works</h2>
+          <h2 className="text-2xl font-medium mb-8">Works</h2>
           <WorksLightbox images={artist.works} altPrefix="Work" />
         </>
       )}
@@ -45,6 +55,9 @@ export default function ArtistPage({ params }: Props) {
           </div>
         </>
       )}
+
+      {/* Links (fallback when no works) */}
+      {/* Links are now shown under the name; no separate section needed */}
     </main>
   );
 }
