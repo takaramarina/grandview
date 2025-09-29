@@ -79,7 +79,7 @@ export type Artist = {
     {
       id: "AKI",
       name: "AKI",
-      cover: "/artists/AKI/work1.jpg",
+      cover: "/artists/aki/work1.jpg",
       bio: "AKI is a video artist exploring the harmony between moving image and sound through synesthetic edits, algorithmic loops, and modular synth performance. Working with projection‑mapped stages and handheld cameras, AKI creates audiovisual sets that breathe, stretch, and fold in time. Recent tours included small theaters across Europe in 2024, alongside limited‑edition video zines and open workshops introducing Ableton and TouchDesigner workflows for newcomers to live visuals.",
       works: [
         "/artists/aki/work1.jpg",
