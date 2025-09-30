@@ -18,7 +18,7 @@ export default function Header() {
         <nav className="hidden sm:flex items-center gap-6 md:gap-8 text-sm">
           <Link href="/" className="hover:opacity-70">Artists</Link>
           <a href="#" className="hover:opacity-70">Exhibitions</a>
-          <a href="#" className="hover:opacity-70">About</a>
+          <Link href="/about" className="hover:opacity-70">About</Link>
           <a href="#" className="hover:opacity-70">Store</a>
         </nav>
 
@@ -54,9 +54,9 @@ export default function Header() {
           <a href="#" className="px-5 py-4 text-base hover:bg-black/5" onClick={() => setMenuOpen(false)}>
             Exhibitions
           </a>
-          <a href="#" className="px-5 py-4 text-base hover:bg-black/5" onClick={() => setMenuOpen(false)}>
+          <Link href="/about" className="px-5 py-4 text-base hover:bg-black/5" onClick={() => setMenuOpen(false)}>
             About
-          </a>
+          </Link>
           <a href="#" className="px-5 py-4 text-base hover:bg-black/5" onClick={() => setMenuOpen(false)}>
             Store
           </a>
